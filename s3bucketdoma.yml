@@ -1,0 +1,13 @@
+   AWSTemplateFormatVersion: "2010-09-09"
+   Description: "Create S3 Bucket with Tag"
+
+   Resources:
+     MyS3Bucket:
+       Type: AWS::S3::Bucket
+       Properties:
+         BucketName: "mycloudformation-bucket-elizadoma2"
+         Tags:
+           - Key: "Env"
+             Value: "Dev"
+           - Key: "Team"
+             Value: "Backend"

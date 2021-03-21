@@ -1,0 +1,17 @@
+   AWSTemplateFormatVersion: "2010-09-09"
+   Description: "Create S3 Bucket with Tag"
+   Parameters:
+     MyS3BucketName:
+       Type: String
+       Default: ""
+       Description: "Enter the name for s3 Bucket"
+   Resources:
+     MyS3Bucket: # Logical Resource ID
+       Type: AWS::S3::Bucket
+       Properties:
+         BucketName: !Ref MyS3BucketName
+         Tags:
+           - Key: "Env"
+             Value: "Dev"
+           - Key: "Team"
+             Value: "Backend"
